@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
+    <meta charset="UTF-8">
     <title>Steen Papier Schaar V2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Steen Papier Schaar V2</h1>
+<div class="container">
 
-<p>Computer: <span id="computer"></span></p>
+    <h1>🎮 Steen Papier Schaar</h1>
 
-<p>Jouw keuze: <span id="human"></span></p>
+    <div class="game-info">
+        <p>🤖 Computer: <span id="computer">-</span></p>
+        <p>👤 Jouw keuze: <span id="human">-</span></p>
+        <p>🏆 Uitkomst: <span id="result">Maak een keuze!</span></p>
+    </div>
 
-<p>Uitkomst: <span id="result"></span></p>
+    <div class="scoreboard">
+        <h2>📊 Scorebord</h2>
 
-<h2>Score</h2>
+        <p>Jij: <span id="playerScore">0</span></p>
 
-<p>Jij: <span id="playerScore">0</span></p>
+        <p>Computer: <span id="computerScore">0</span></p>
 
-<p>Computer: <span id="computerScore">0</span></p>
+        <p>Ronde: <span id="round">0</span></p>
 
-<button id="steen">Steen</button>
-<button id="papier">Papier</button>
-<button id="schaar">Schaar</button>
+        <p>Win Streak: <span id="streak">0</span></p>
+    </div>
+
+    <div class="buttons">
+        <button id="steen">🪨 Steen</button>
+        <button id="papier">📄 Papier</button>
+        <button id="schaar">✂️ Schaar</button>
+    </div>
+
+</div>
 
 <script src="script.js"></script>
 

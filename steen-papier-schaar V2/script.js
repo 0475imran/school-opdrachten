@@ -5,6 +5,9 @@ const resultOutput = document.querySelector("#result")
 const playerScoreOutput = document.querySelector("#playerScore")
 const computerScoreOutput = document.querySelector("#computerScore")
 
+const roundOutput = document.querySelector("#round")
+const streakOutput = document.querySelector("#streak")
+
 const buttons = document.querySelectorAll("button")
 
 let humanChoice
@@ -12,6 +15,9 @@ let computerChoice
 
 let playerScore = 0
 let computerScore = 0
+
+let round = 0
+let streak = 0
 
 // speler klikt op een knop
 buttons.forEach(function(button){
@@ -30,6 +36,10 @@ function playGame(choice){
     humanChoice = choice
 
     humanOutput.innerHTML = humanChoice
+
+    round++
+
+    roundOutput.innerHTML = round
 
     generateComputerChoice()
 
@@ -69,6 +79,8 @@ function determineWinner(){
 
         resultOutput.innerHTML = "Gelijkspel"
 
+        resultOutput.style.color = "white"
+
     }
 
     else if(
@@ -79,9 +91,13 @@ function determineWinner(){
 
         resultOutput.innerHTML = "Jij wint"
 
+        resultOutput.style.color = "lightgreen"
+
         playerScore++
+        streak++
 
         playerScoreOutput.innerHTML = playerScore
+        streakOutput.innerHTML = streak
 
     }
 
@@ -89,9 +105,13 @@ function determineWinner(){
 
         resultOutput.innerHTML = "Computer wint"
 
+        resultOutput.style.color = "tomato"
+
         computerScore++
+        streak = 0
 
         computerScoreOutput.innerHTML = computerScore
+        streakOutput.innerHTML = streak
 
     }
 
