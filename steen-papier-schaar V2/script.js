@@ -19,7 +19,7 @@ let computerScore = 0
 let round = 0
 let streak = 0
 
-// speler klikt op een knop
+// player clicks a button
 buttons.forEach(function(button){
 
     button.addEventListener("click", function(event){
@@ -30,7 +30,7 @@ buttons.forEach(function(button){
 
 })
 
-// hoofd functie van het spel
+// main game function
 function playGame(choice){
 
     humanChoice = choice
@@ -47,7 +47,7 @@ function playGame(choice){
 
 }
 
-// computer kiest willekeurig
+// generate random computer choice
 function generateComputerChoice(){
 
     let randomNumber = Math.floor(Math.random() * 3) + 1
@@ -72,7 +72,7 @@ function generateComputerChoice(){
 
 }
 
-// winnaar bepalen
+// determine the winner
 function determineWinner(){
 
     if(humanChoice == computerChoice){
